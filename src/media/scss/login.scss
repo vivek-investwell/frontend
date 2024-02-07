@@ -1,0 +1,66 @@
+  .logIn{
+    position: relative;
+    height: 100vh;
+    .entryForms{
+    position: absolute;
+    background-color: #ffffff;
+    display: grid;
+    width: 28vw;
+    height: 33vh;
+     margin-left: 36%;
+    // margin-top: 15%;
+    top: 32vh;
+    // box-shadow: 10px 5px 13px 3px rgba(255, 255, 255, 5.1);
+    box-shadow: 10px 5px 13px 3px rgba(108, 110, 111, 0.5);
+    padding: 9px;
+    .fromInput{
+        // outline: none;
+        outline: none;
+        border: none;
+        // background-color: #d2e6f9;
+        @media screen and (max-width: 436px) {
+            width: 36vw;
+        }
+    }
+    .loginBtn{
+        background-color: #47b747;
+        color: white;
+        outline: none;
+        border: none;
+        width: 13vw;
+        margin-left: 27%;
+        margin-top: 3vh;
+    }
+    .newUser{
+        margin-top: 1vh;
+        text-align: center;
+    }
+    .signLink{
+        text-decoration: none;
+        }
+    }
+    #loginToast{
+        color: red;
+        display: none;
+        position: absolute;
+        background-color: #cdcde0;
+        width: 13vw;
+        bottom: 10vh;
+        padding: 15px;
+        @keyframes loginMotion {
+            0%{
+                left: -17vw;
+                // opacity: 0;
+                // display: none;
+            }
+            100%{
+                left: 0;
+                // display: block;
+            }
+        }
+        animation-name: loginMotion;
+        animation-duration: 1.5s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+}
