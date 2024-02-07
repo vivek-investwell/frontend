@@ -1,0 +1,63 @@
+.signIn{
+    .signInForms {
+    padding: 12px;
+    background-color: white;
+    display: grid;
+    width: 42vw;
+    height: 40vh;
+    color: black;
+    margin-left: 27%;
+    margin-top: 13%;
+    box-shadow: 10px 5px 13px 3px rgba(108, 110, 111, 2.5);
+    
+    .signInInput {
+        outline: none;
+        border: none;
+        background-color: #d2e6f9;
+        @media screen and (max-width: 436px) {
+            width: 38vw;
+        }
+    }
+    
+    .signInBtn {
+        background-color: #47b747;
+        color: white;
+        margin-top: 3vh;
+        outline: none;
+        border: none;
+        width: 15vw;
+        margin-left: 30%;
+    }
+    #signResult{
+        color: red;
+    }
+    
+    @media screen and (max-width: 436px) {
+        margin-top: 34%;
+    }
+}
+#signToast{
+    color: red;
+    display: none;
+    position: absolute;
+    background-color: #cdcde0;
+    width: 13vw;
+    bottom: 10vh;
+    padding: 15px;
+    @keyframes signInMotion {
+        0%{
+            left: -17vw;
+            // opacity: 0;
+            // display: none;
+        }
+        100%{
+            left: 0;
+            // display: block;
+        }
+    }
+    animation-name: signInMotion;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+}
