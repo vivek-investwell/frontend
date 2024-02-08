@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+// import LoginIndex from './Login'
 import LoginIndex from './Login'
 import '../../media/css/login.css'
 import axios from 'axios'
@@ -24,14 +25,23 @@ const submit = async(event)=>{
     const resp = await axios.post('http://localhost:8000/auth/login', {
     email: EMAIL,
     password: PASS
-    });
+    },{withCredentials:true});
     console.log("resp", resp);
     
-    if(resp.data==='Incorrect password' || resp.data==='user not found'){
+    // if(resp.data==='Incorrect password' || resp.data==='user not found'){
+    //   console.log(resp);
+    //   const element = document.getElementById('loginToast');
+    //   element.style.display='block';
+    //   element.innerText=`${resp.data}`;
+    //   setTimeout(()=>{
+    //   element.style.display='none';
+    //   } , 3000)
+    // }
+    if(resp.data.success==='false'){
       console.log(resp);
       const element = document.getElementById('loginToast');
       element.style.display='block';
-      element.innerText=`${resp.data}`;
+      element.innerText=`${resp.data.message}`;
       setTimeout(()=>{
       element.style.display='none';
       } , 3000)
@@ -50,7 +60,7 @@ const submit = async(event)=>{
 //  },[resp.data]);
   return (
     <div className='logIn'>
-    <LoginIndex 
+    <LoginIndex
     handleEmail={handleEmail}
       handlePassword={handlePassword}
       handleSubmit={submit}

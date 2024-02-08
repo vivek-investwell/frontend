@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 import Signup from './Signup'
+import axios from 'axios'
+// import Signup2 from './Signup2'
 import { useNavigate ,Link} from 'react-router-dom';
-import '../../media/css/signup.css'
+
 export default function SignUpIndex() {
   const [EMAIL , setEmail] = useState("");
   const [PASS , setPassword] = useState("");
@@ -26,11 +27,18 @@ const signUpSubmit = async(event)=>{
     email: EMAIL,
     password: PASS
     });
-    console.log(resp.data[2]);
+    console.log(resp.data.success);
     
-    if(resp.data.controllerResponse==='user already exist' || resp.data.controllerResponse==='password too small! minimum 6 character allowed' || resp.data.controllerResponse==='Not a valid Password'){
+    // if(resp.data.controllerResponse==='user already exist' || resp.data.controllerResponse==='password too small! minimum 6 character allowed' || resp.data.controllerResponse==='Not a valid Password'){
+    //   const element = document.getElementById('signToast');
+    //   element.innerText=`${resp.data.controllerResponse}`;
+    //   element.style.display='block';
+    //   setTimeout(() => {
+    //   element.style.display='none';
+    //   }, 3000);
+    if((resp.data.success==='false')){
       const element = document.getElementById('signToast');
-      element.innerText=`${resp.data.controllerResponse}`;
+      element.innerText=`${resp.data.Message}`;
       element.style.display='block';
       setTimeout(() => {
       element.style.display='none';
