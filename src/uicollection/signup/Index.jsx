@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Signup from './Signup'
 import axios from 'axios'
-import Signup2 from './Signup2'
+import Signup from './Signup'
 import { useNavigate ,Link} from 'react-router-dom';
-
+import '../../media/css/signup.css'
 export default function SignUpIndex() {
   const [EMAIL , setEmail] = useState("");
   const [PASS , setPassword] = useState("");
@@ -54,7 +53,7 @@ const signUpSubmit = async(event)=>{
   return (
     <div className='signIn'>
   
-    <Signup2 
+    <Signup 
     handleName={handleName}
     handleEmail={handleEmail}
     handlePassword={handlePassword}

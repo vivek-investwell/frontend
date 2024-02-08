@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import LoginIndex from './Login'
-import LoginIndex2 from './Login2'
 import '../../media/css/login.css'
 import axios from 'axios'
 
@@ -51,7 +50,7 @@ const submit = async(event)=>{
 //  },[resp.data]);
   return (
     <div className='logIn'>
-    <LoginIndex2 
+    <LoginIndex 
     handleEmail={handleEmail}
       handlePassword={handlePassword}
       handleSubmit={submit}
