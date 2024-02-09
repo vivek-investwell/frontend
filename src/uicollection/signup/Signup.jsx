@@ -10,13 +10,13 @@ export default function Signup({handleName , handleEmail , handlePassword , hand
   return (
     <form onSubmit={handleSubmit} className='signInForms'>
     <div className='formHeading'>SignUp</div>
-      <label>Name</label>
+      <label className='formLable'>Name</label>
       <input className='signInInput' id='name' placeholder='Your Name' onChange={handleName}></input>
-      <label>Email</label>
+      <label className='formLable'>Email</label>
       <input className='signInInput' id='email' type='email' placeholder='example@gmail.com' onChange={handleEmail}></input>
-      <label>Password</label>
+      <label className='formLable'>Password</label>
       <input className='signInInput' id='password' type='password'placeholder='Your Password' onChange={handlePassword}></input>
-      <button type="submit" className='signInBtn'>SignUP</button>
+      <button type="submit" className='signInBtn'>submit</button>
       <div className='oldUser'>back to <Link to={'/'} className='signInLink'>Login</Link></div>
 
     <div id='signResult'></div>

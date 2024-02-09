@@ -12,14 +12,16 @@
     margin-left: 38%;
     // margin-top: 15%;
     top: 32vh;
-    // box-shadow: 10px 5px 13px 3px rgba(255, 255, 255, 5.1);
-    box-shadow: 10px 5px 13px 3px rgba(108, 110, 111, 0.5);
+    box-shadow: 10px 5px 13px 3px #6c6e6f;
     padding: 9px;
     .formHeading{
         text-align: center;
     font-size: x-large;
     font-weight: bolder;
-    @media screen and (max-width: 388px) {
+    @media screen and (max-width: 1024px) {
+        font-size: 38px;
+    }
+    @media screen and (max-width: 408px) {
         font-size: medium;
     }
     }
@@ -27,8 +29,12 @@
         // outline: none;
         outline: none;
         // background-color: #d2e6f9;
-        @media screen and (max-width: 388px) {
-            width: 52vw;
+        margin-bottom: 4%;
+        @media screen and (max-width: 1024px) {
+            font-size: 24px;
+        }
+        @media screen and (max-width: 430px) {
+            font-size: 14px;
         }
     }
     .loginBtn{
@@ -36,12 +42,19 @@
         color: white;
         outline: none;
         border: none;
-        width: 13vw;
-        margin-left: 21%;
+        font-size: 19px;
+        width: 11vw;
+        margin-left: 28%;
         margin-top: 3vh;
         min-width: fit-content;
-        @media screen and (max-width: 388px) {
-            margin-left: 37%;
+        @media screen and (max-width: 1024px) {
+            font-size: 27px;
+            width: 19vw;
+            }
+        
+        @media screen and (max-width: 430px) {
+            font-size: 16px;
+        margin-left: 35%;
         }
        
     }
@@ -52,9 +65,22 @@
     .signLink{
         text-decoration: none;
         }
-        @media screen and (max-width: 388px) {
+        @media screen and (max-width: 1024px) {
+            width: 51vw;
+            margin-left: 24%;
+            right: 22vw;
+            font-size: 29px;
+            padding: 22px;
+        }
+        @media screen and (max-width: 430px) {
+            left:-5vw;
+            width: 54vw;
+            right: 23vw;
             font-size: small;
-            margin-left: 19%;
+        }
+        @media screen and (max-width: 281px) {
+            right: 23vw;
+
         }
     }
     #loginToast{
@@ -81,4 +107,5 @@
         animation-iteration-count: 2;
         animation-direction: alternate;
     }
+   
 }
