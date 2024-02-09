@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-// import LoginIndex from './Login'
 import LoginIndex from './Login'
+// import LoginIndex2 from './Login2'
 import '../../media/css/login.css'
 import axios from 'axios'
 

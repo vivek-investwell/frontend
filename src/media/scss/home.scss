@@ -2,7 +2,20 @@
     position: relative;
     height: 100vh;
     .heading{
-    color: white;
+    // color: white;
+    }
+    .showBtn{
+        background-color: #47b747;
+        color: white;
+        margin-top: 3vh;
+        outline: none;
+        border: none;
+        width: 15vw;
+        height: 5vh;
+    }
+    #showData{
+        margin-top: 2vh;
+        // color: white;
     }
     #homeToast{
         color: white;

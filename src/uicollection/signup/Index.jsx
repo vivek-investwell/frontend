@@ -61,12 +61,12 @@ const signUpSubmit = async(event)=>{
   return (
     <div className='signIn'>
   
-    <Signup 
+    <Signup
     handleName={handleName}
     handleEmail={handleEmail}
     handlePassword={handlePassword}
     handleSubmit={signUpSubmit}/>
-    <Link to={{pathname:"/home", state:{props:''}}}> home</Link>
+    {/* <Link to={{pathname:"/home", state:{props:''}}}> home</Link> */}
     <div id='signToast'>asd</div>
     </div>
   )

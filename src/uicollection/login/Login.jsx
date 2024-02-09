@@ -7,6 +7,7 @@ export default function LoginIndex({handleEmail , handlePassword , handleSubmit}
   return (
     <>
     <form onSubmit={handleSubmit} className='entryForms'>
+    <div className='formHeading'>Login</div>
     <label>Email</label>
     <input className='formInput' id='email' type='email' placeholder='example@gmail.com' onChange={handleEmail}></input>
     <label>Password</label>
