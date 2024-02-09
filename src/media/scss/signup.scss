@@ -1,0 +1,86 @@
+.signIn{
+    position: relative;
+    .signInForms {
+        position: absolute;
+        padding: 12px;
+        background-color: white;
+        display: grid;
+        width: 24vw;
+        height: 41vh;
+        color: black;
+        margin-left: 36%;
+        top: 26vh;
+        min-width: fit-content;
+        box-shadow: 10px 5px 13px 3px #6c6e6f;
+        .formHeading{
+            text-align: center;
+        font-size: x-large;
+        font-weight: bolder;
+        @media screen and (max-width: 408px) {
+            font-size: medium;
+        }
+        }
+    .signInInput {
+        outline: none;
+        border: none;
+        background-color: #d2e6f9;
+        border-radius: 3%;
+        // @media screen and (max-width: 436px) {
+        //     width: 38vw;
+        // }
+    }
+    
+    .signInBtn {
+        background-color: #47b747;
+        color: white;
+        margin-top: 3vh;
+        outline: none;
+        border: none;
+        width: 11vw;
+        min-width: fit-content;
+        margin-left: 28%;
+        @media screen and (max-width: 408px) {
+        margin-left: 31%;
+        }
+    }
+    .oldUser{
+        text-align: center ;
+        .signInLink{
+        text-decoration: none;
+        }
+        }
+    #signResult{
+        color: red;
+    }
+    
+    @media screen and (max-width: 408px) {
+        margin-left:14%;
+        width: 54vw;
+        font-size: small;
+    }
+}
+#signToast{
+    color: red;
+    display: none;
+    position: absolute;
+    background-color: #cdcde0;
+    width: 13vw;
+    bottom: 10vh;
+    padding: 15px;
+    @keyframes signInMotion {
+        0%{
+            left: -17vw;
+            // opacity: 0;
+            // display: none;
+        }
+        100%{
+            left: 0;
+            // display: block;
+        }
+    }
+    animation-name: signInMotion;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+}

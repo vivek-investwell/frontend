@@ -1,0 +1,84 @@
+.logIn{
+    position: relative;
+    height: 100vh;
+    .entryForms{
+    position: absolute;
+    background-color: #ffffff;
+
+    display: grid;
+    width: 22vw;
+    height: 39vh;
+    min-width: fit-content;
+    margin-left: 38%;
+    // margin-top: 15%;
+    top: 32vh;
+    // box-shadow: 10px 5px 13px 3px rgba(255, 255, 255, 5.1);
+    box-shadow: 10px 5px 13px 3px rgba(108, 110, 111, 0.5);
+    padding: 9px;
+    .formHeading{
+        text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    @media screen and (max-width: 388px) {
+        font-size: medium;
+    }
+    }
+    .formInput{
+        // outline: none;
+        outline: none;
+        // background-color: #d2e6f9;
+        @media screen and (max-width: 388px) {
+            width: 52vw;
+        }
+    }
+    .loginBtn{
+        background-color: #47b747;
+        color: white;
+        outline: none;
+        border: none;
+        width: 13vw;
+        margin-left: 21%;
+        margin-top: 3vh;
+        min-width: fit-content;
+        @media screen and (max-width: 388px) {
+            margin-left: 37%;
+        }
+       
+    }
+    .newUser{
+        margin-top: 1vh;
+        text-align: center;
+    }
+    .signLink{
+        text-decoration: none;
+        }
+        @media screen and (max-width: 388px) {
+            font-size: small;
+            margin-left: 19%;
+        }
+    }
+    #loginToast{
+        color: red;
+        display: none;
+        position: absolute;
+        background-color: #cdcde0;
+        width: 13vw;
+        bottom: 10vh;
+        padding: 15px;
+        @keyframes loginMotion {
+            0%{
+                left: -17vw;
+                // opacity: 0;
+                // display: none;
+            }
+            100%{
+                left: 0;
+                // display: block;
+            }
+        }
+        animation-name: loginMotion;
+        animation-duration: 1.5s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+}

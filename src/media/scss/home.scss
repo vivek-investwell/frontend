@@ -1,0 +1,45 @@
+.home{
+    position: relative;
+    height: 100vh;
+    .heading{
+    // color: white;
+    }
+    .showBtn{
+        background-color: #47b747;
+        color: white;
+        margin-top: 3vh;
+        outline: none;
+        border: none;
+        width: 15vw;
+        height: 5vh;
+    }
+    #showData{
+        margin-top: 2vh;
+        // color: white;
+    }
+    #homeToast{
+        color: white;
+        position: absolute;
+        display: block;
+        background-color: #cdcde0;
+        width: 13vw;
+        bottom: 10vh;
+        padding: 15px;
+
+        @keyframes motion {
+            0%{
+                left: -17vw;
+                // opacity: 0;
+                // display: none;
+            }
+            100%{
+                left: 0;
+                // display: block;
+            }
+        }
+        animation-name: motion;
+        animation-duration: 1.5s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+}
