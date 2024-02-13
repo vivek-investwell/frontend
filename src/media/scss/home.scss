@@ -4,26 +4,96 @@
     .heading{
     // color: white;
     }
-    .showBtn{
+    // .navbar{
+    //     background: rgba(0, 0, 0, 0.6);
+    //     width: fit-content;
+    //     line-height: 7vh;
+    //     text-align: center;
+    //     width: 16vw;
+    //     // display: none;
+    //     // transition: all 1s ease; 
+    //     .navContent{
+    //         font-weight: bold;
+    //         color: white;
+    //         border-bottom: 1px solid gray;
+    //         border-right: 1px solid gray;
+    //         letter-spacing: 2px;
+    //         .navLink{
+    //             color: white;
+    //             text-decoration: none;
+    //             &:hover{
+    //                 color: #6ca5d3;
+    //             }
+    //             }
+                
+    //     }
+    //     @keyframes slideIn {
+    //         from {
+    //           transform: translateX(-100%);
+    //         }
+    //         to {
+    //           transform: translateX(0);
+    //         }
+    //       }
+    //       animation: slideIn 0.5s ease-in-out; 
+    //     // .navbar.show{
+    //     //     display: block;
+    //     // }
+    //     // animation-name: navmotion;
+    //     // animation-duration: 1s;
+
+    // }
+    .right{
+        position: absolute;
+        top: 40vh;
+        left: 43vw;
+        .showBtn{
         background-color: #47b747;
         color: white;
         margin-top: 3vh;
         outline: none;
         border: none;
         width: 15vw;
+        font-size: 2vh;
         height: 5vh;
     }
     #showData{
         margin-top: 2vh;
         // color: white;
     }
-    #homeToast{
-        color: white;
+    // #homeToast{
+    //     color: white;
+    //     position: absolute;
+    //     display: block;
+    //     background-color: #cdcde0;
+    //     width: 13vw;
+    //     bottom: 1vh;
+    //     padding: 15px;
+
+    //     @keyframes motion {
+    //         0%{
+    //             left: -17vw;
+    //             // opacity: 0;
+    //             // display: none;
+    //         }
+    //         100%{
+    //             left: 0;
+    //             // display: block;
+    //         }
+    //     }
+    //     animation-name: motion;
+    //     animation-duration: 1.5s;
+    //     animation-iteration-count: 2;
+    //     animation-direction: alternate;
+    // }
+    }
+      #homeToast{
+        color: black;
         position: absolute;
         display: block;
         background-color: #cdcde0;
         width: 13vw;
-        bottom: 10vh;
+        bottom: 3vh;
         padding: 15px;
 
         @keyframes motion {
@@ -41,5 +111,16 @@
         animation-duration: 1.5s;
         animation-iteration-count: 2;
         animation-direction: alternate;
+    }
+    .logout{
+        position: absolute;
+        right: 0;
+        background-color: #47b747;
+        color: white;
+        outline: none;
+        border: none;
+        width: 5vw;
+        font-size: 2vh;
+        height: 5vh;
     }
 }

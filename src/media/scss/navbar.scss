@@ -1,0 +1,63 @@
+.navIcon{
+    position: absolute;
+}
+.navbar{
+
+    background: rgba(0, 0, 0, 0.6);
+    width: fit-content;
+    height: 100%;
+    line-height: 7vh;
+    text-align: center;
+    width: 16vw;
+    min-width: fit-content;
+    // display: none;
+    // transition: all 1s ease; 
+    .topNavContent{
+        font-weight: bold;
+        color: white;
+        border-bottom: 1px solid gray;
+        padding: 18px;
+        border-right: 1px solid gray;
+        letter-spacing: 2px;
+        .navLink{
+            color: white;
+            text-decoration: none;
+            &:hover{
+                color: #6ca5d3;
+            }
+            }
+        
+    }
+    .navContent{
+        
+        font-weight: bold;
+        color: white;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        letter-spacing: 2px;
+        .navLink{
+            color: white;
+            text-decoration: none;
+            &:hover{
+                color: #6ca5d3;
+            }
+            }
+        
+            
+    }
+    @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      animation: slideIn 0.5s ease-in-out; 
+    // .navbar.show{
+    //     display: block;
+    // }
+    // animation-name: navmotion;
+    // animation-duration: 1s;
+
+}

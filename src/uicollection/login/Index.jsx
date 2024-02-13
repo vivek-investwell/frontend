@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import LoginIndex from './Login'
-// import LoginIndex2 from './Login2'
 import '../../media/css/login.css'
 import axios from 'axios'
 
@@ -21,7 +20,6 @@ export default function Index() {
 const submit = async(event)=>{
   try{
     event.preventDefault();
-  
     const resp = await axios.post('http://localhost:8000/auth/login', {
     email: EMAIL,
     password: PASS

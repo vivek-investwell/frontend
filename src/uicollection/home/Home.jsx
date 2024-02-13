@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import '../../media/css/home.css'
-import { json, useLocation, useNavigate } from 'react-router-dom';
+import { Link, json, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from '../shared/Navbar';
+const icon = require("../../media/images/menu.png");
+// const {Navbar} = require('../shared/Navbar')
 export default function Home() {
   const location = useLocation();
   // const currentUser =  localStorage.getItem("currentUser");
   console.log("eher " , location.state?.props);
   const username = location.state?.props;
   const [display , setDisplay] = useState(false);
+  // const [show , setshow] = useState(false);
   const navigate = useNavigate();
   useEffect(()=>{
     if(username && username.length>1){
@@ -43,10 +47,15 @@ export default function Home() {
   }
   return (
     <div className='home'>
-    <div className='heading'> hi my name is {username}</div>
-    <button className = "showBtn" onClick={handleUser}>check user</button>
-    <div id='showData'></div>
-    {display && <div id='homeToast'>successfully logged In</div>}
+     
+     <Navbar/>
+     <div className = 'right'>
+        <div className='heading'> hi my name is {username}</div>
+        <button className = "showBtn" onClick={handleUser}>check user</button>
+        <div id='showData'></div>
+     </div>
+     {display && <div id='homeToast'>successfully logged In</div>}
+      {/* <button className='logout'>Logout</button> */}
     </div>
   )
 }
