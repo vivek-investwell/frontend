@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../media/css/policy.css'
 import Navbar from './shared/Navbar';
+// const base64 = require('base64topdf');
 const pdfRef  = require('../media/pdf/sample.pdf')
 export default function PolicyDocs() {
     const openPdf=(pdf)=>{
@@ -30,6 +31,24 @@ export default function PolicyDocs() {
     // console.log(str);
     //   window.open(str , '_black');
     // }
+    const handleParticularPdf = async () => {
+      fetch('http://localhost:8000/auth/pdfLink')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        // Assuming the response contains the PDF file
+        return response.blob();
+      })
+      .then(pdfBlob => {
+        // Create a URL for the PDF blob
+        const url = URL.createObjectURL(pdfBlob);
+        // Open the PDF in a new tab
+        window.open(url , '_blank');
+      })
+    }
+
+
     const [data , setdata] = useState([]);
     useEffect(()=>{
       let func = async function(){
@@ -65,7 +84,8 @@ export default function PolicyDocs() {
                             <td className='tableData'>{singleData.name}</td>
                             <td className='tableData'>
                                 {/* <button className='pdfbtn' onClick={() => openPdf(singleData.path)}>PDF</button> */}
-                                <button className='pdfbtn' onClick={() => handlePdf()}>PDF</button>
+                                {/* <button className='pdfbtn' onClick={() => handlePdf()}>PDF</button> */}
+                                <button className='pdfbtn' onClick={() => handleParticularPdf()}>PDF</button>
                             </td>
                         </tr>
                     ))}
