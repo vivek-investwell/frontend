@@ -3,15 +3,12 @@ import '../../media/css/home.css'
 import { Link, json, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../shared/Navbar';
-const icon = require("../../media/image/menubar.png");
-// const {Navbar} = require('../shared/Navbar')
+const icon = require("../../media/images/menu.png");
 export default function Home() {
   const location = useLocation();
-  // const currentUser =  localStorage.getItem("currentUser");
   console.log("eher " , location.state?.props);
   const username = location.state?.props;
   const [display , setDisplay] = useState(false);
-  // const [show , setshow] = useState(false);
   const navigate = useNavigate();
   useEffect(()=>{
     if(username && username.length>1){
@@ -36,14 +33,24 @@ export default function Home() {
       // return;
     }else{
       console.log("data" , data); 
-      console.log("response" , response.data); 
+      console.log("responsee" , response.data); 
+      const dataString = JSON.stringify(response.data);
+      // document.getElementById('showData').innerText = `${dataString}`;
       document.getElementById('showData').innerText = `${dataString}`;
+
     }
     
   })
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+  }
+  const handleLogout = async()=>{
+        const res =  await axios.post('http://localhost:8000/auth/logout',{withCredentials: true })
+        console.log("log",res);
+        if(res.data === "user has been logged out"){
+          navigate("/");
+        }
   }
   return (
     <div className='home'>
@@ -55,7 +62,7 @@ export default function Home() {
         <div id='showData'></div>
      </div>
      {display && <div id='homeToast'>successfully logged In</div>}
-      {/* <button className='logout'>Logout</button> */}
+       <button className='logout' onClick={handleLogout}>Logout</button> 
     </div>
   )
 }
