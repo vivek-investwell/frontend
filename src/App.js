@@ -1,22 +1,17 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginIndex from './uicollection/login/Index';
+import SignUpIndex from './uicollection/signup/Index';
+import HomeIndex from './uicollection/home/Index';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <BrowserRouter>
+    <Routes>
+      <Route path='/' element = {<LoginIndex/>}/>
+      <Route path='/signUp' element = {<SignUpIndex/>}/>
+      <Route path='/home' element={<HomeIndex/>}></Route>
+    </Routes>
+   </BrowserRouter>
   );
 }
 

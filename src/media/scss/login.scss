@@ -1,0 +1,113 @@
+.logIn{
+    font-family: Playfair;
+    font-size: 20px;
+    position: relative;
+    height: 100vh;
+    .entryForms{
+    position: absolute;
+    background-color: #ffffff;
+
+    display: grid;
+    width: 22vw;
+    height: 39vh;
+    min-width: fit-content;
+    margin-left: 38%;
+    // margin-top: 15%;
+    top: 32vh;
+    box-shadow: 1px 2px 11px 6px #6c6e6f;
+    padding: 9px;
+    .formHeading{
+        text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    @media screen and (max-width: 1024px) {
+        font-size: 38px;
+    }
+    @media screen and (max-width: 408px) {
+        font-size: medium;
+    }
+    }
+    .formInput{
+        // outline: none;
+        outline: none;
+        // background-color: #d2e6f9;
+        margin-bottom: 4%;
+        @media screen and (max-width: 1024px) {
+            font-size: 24px;
+        }
+        @media screen and (max-width: 430px) {
+            font-size: 14px;
+        }
+    }
+    .loginBtn{
+        background-color: #47b747;
+        color: white;
+        outline: none;
+        border: none;
+        font-size: 19px;
+        width: 11vw;
+        margin-left: 28%;
+        margin-top: 3vh;
+        min-width: fit-content;
+        @media screen and (max-width: 1024px) {
+            font-size: 27px;
+            width: 19vw;
+            }
+        
+        @media screen and (max-width: 430px) {
+            font-size: 16px;
+        margin-left: 35%;
+        }
+       
+    }
+    .newUser{
+        margin-top: 1vh;
+        text-align: center;
+    }
+    .signLink{
+        text-decoration: none;
+        }
+        @media screen and (max-width: 1024px) {
+            width: 51vw;
+            margin-left: 24%;
+            right: 22vw;
+            font-size: 29px;
+            padding: 22px;
+        }
+        @media screen and (max-width: 430px) {
+            left:-5vw;
+            width: 54vw;
+            right: 23vw;
+            font-size: small;
+        }
+        @media screen and (max-width: 281px) {
+            right: 23vw;
+
+        }
+    }
+    #loginToast{
+        color: red;
+        display: none;
+        position: absolute;
+        background-color: #cdcde0;
+        width: 13vw;
+        bottom: 10vh;
+        padding: 15px;
+        @keyframes loginMotion {
+            0%{
+                left: -17vw;
+                // opacity: 0;
+                // display: none;
+            }
+            100%{
+                left: 0;
+                // display: block;
+            }
+        }
+        animation-name: loginMotion;
+        animation-duration: 1.5s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+   
+}

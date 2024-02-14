@@ -1,0 +1,35 @@
+.policy{
+    position: relative;
+    height: 100vh;
+    .tableHeading{
+        position: absolute;
+        top: 26vh;
+         left: 45vw;
+    }
+    .tableBody{
+        background-color: rgb(151, 149, 155);
+    }
+    .contentHeading{
+        color: white;
+    background-color: black;
+    }
+    .policyTable{
+        position: absolute;
+    text-align: center;
+    top: 32vh;
+    left: 32vw;
+    width: 36vw;
+    border-collapse: collapse;
+    .tableData{
+        border: 1px solid black;
+        padding: 14px;
+        .pdfbtn{
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            height: 3vh;
+            width: 6vw;
+            min-width: fit-content;
+        }
+    }
+}
+}
