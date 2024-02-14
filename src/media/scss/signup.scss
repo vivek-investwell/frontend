@@ -1,5 +1,7 @@
 .signIn{
     height: 100vh;
+    font-size: 20px;
+    font-family: Playfair;
     position: relative;
     .signInForms {
         position: absolute;
@@ -14,7 +16,7 @@
         top: 32vh;
         min-width: fit-content;
         min-height: max-content;
-        box-shadow: 10px 5px 13px 3px #6c6e6f;
+        box-shadow: 1px 2px 11px 6px #6c6e6f;
         .formHeading{
             text-align: center;
         font-size: x-large;

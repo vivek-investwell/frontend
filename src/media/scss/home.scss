@@ -1,5 +1,6 @@
 .home{
     position: relative;
+    font-family: rubik;
     height: 100vh;
     .heading{
     // color: white;
@@ -115,6 +116,7 @@
     .logout{
         position: absolute;
         right: 0;
+        top: 0;
         background-color: #47b747;
         color: white;
         outline: none;

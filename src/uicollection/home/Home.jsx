@@ -3,7 +3,7 @@ import '../../media/css/home.css'
 import { Link, json, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../shared/Navbar';
-const icon = require("../../media/images/menu.png");
+const icon = require("../../media/image/menubar.png");
 // const {Navbar} = require('../shared/Navbar')
 export default function Home() {
   const location = useLocation();

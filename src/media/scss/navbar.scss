@@ -1,5 +1,9 @@
 .navIcon{
+    // width: 5vh;
     position: absolute;
+    .navIconImg{
+        width: 3vw;
+    }
 }
 .navbar{
 
@@ -12,13 +16,20 @@
     min-width: fit-content;
     // display: none;
     // transition: all 1s ease; 
+    .topNav{
+        height: 4vh;
+    }
     .topNavContent{
         font-weight: bold;
         color: white;
         border-bottom: 1px solid gray;
-        padding: 18px;
+        // padding: 18px;
         border-right: 1px solid gray;
         letter-spacing: 2px;
+        .navImg{
+            width: 4vw;
+            height: 4vh;
+        }
         .navLink{
             color: white;
             text-decoration: none;
@@ -35,6 +46,10 @@
         border-bottom: 1px solid gray;
         border-right: 1px solid gray;
         letter-spacing: 2px;
+        .navImg{
+            width: 4vw;
+            height: 4vh;
+        }
         .navLink{
             color: white;
             text-decoration: none;
@@ -60,4 +75,5 @@
     // animation-name: navmotion;
     // animation-duration: 1s;
 
+    
 }
